@@ -1,11 +1,10 @@
 @import "../shared/helper";
 
-@function px($n){
-    @return $n/2420 *100rem;
-}
+
 
 .x {
-    width: px(367);
-    height: px(315);
+  
+    height: px(58);
     border: 1px red solid;
+    background-size: cover;
 }
