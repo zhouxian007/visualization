@@ -3,40 +3,96 @@
 
 
 .home {
+    background: #000018;
     flex: 1;
     height: 100%;
     display: flex;
     flex-direction: column;
+    color: #7da1ff;
+
     > header{
-        height: px(68);
+        height: 3.2rem;
         background-size: cover;
     }
     > main{
+        padding: 6px 0;
         flex: 1;
         display:grid;
         grid-template:
         " box1 box2 box4 box5" 755fr
-        
         " box3 box3 box4 box5" 363fr /366fr 361fr 811fr 747fr;
+        grid-column-gap: px(28);
+        grid-row-gap: px(28);
+       >section{
+        text-align: center;
+       }
+        .bordered{
+            background-color: #001f48b3;
+            border: 1px solid #0884f7;
+            border-radius: 4px;
+            position: relative;
+            box-shadow: 0 0 2px 0 #0f3361,inset 0 0 2px 0 #0f3361;
+            &::before{
+                content: '';
+                position: absolute;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                top: 0;
+                box-shadow: 
+                41px 0 0 -40px #082348,
+                -41px 0 0 -40px #082348,
+                0 41px 0 -40px #082348,
+                0 -41px 0 -40px #082348,
+                21px 0 0 -20px #134689,
+                -21px 0 0 -20px #134689,
+                0 21px 0 -20px #134689,
+                0 -21px 0 -20px #134689,
+                
+                ;
+                border-radius: 4px;
+            }
+        }
         > .section1{
             grid-area: box1;
-            background: pink;
+           
         }
         > .section2{
             grid-area: box2;
-            background: lightcyan;
+          
         }
         > .section3{
             grid-area: box3;
-            background: lightgreen;
+           
         }
         > .section4{
             grid-area: box4;
-            background: lightgoldenrodyellow;
+           
         }
         > .section5{
             grid-area: box5;
-            background: lightseagreen;
+      
         }
+       
+    }
+    .脆弱性感知_弱密码{
+        height: px(315);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h2{
+            border:1px solid #0d428c;
+            flex-shrink: 0;
+            border-radius:  0 0 3px 3px ;
+            padding:px(5);
+            font-size: px(22);
+            text-shadow: 0 0 px(2) white;
+        }
+        .chart{
+            flex: 1;
+            width: 100%;
+            
+        }
+       
     }
 }
